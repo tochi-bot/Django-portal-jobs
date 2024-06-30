@@ -1,10 +1,10 @@
 ---
 name: Job Seeker
-about: Application Status Tracking
+about: User Authentication
 title: ''
 labels: ''
 assignees: ''
 
 ---
 
-As a job seeker, I want to track the status of my job applications so that I can know if I am still in consideration or not
+As any user, I want to log in and log out securely so that my personal information is protected.
