@@ -9,8 +9,15 @@ https://docs.djangoproject.com/en/3.2/howto/deployment/wsgi/
 
 import os
 
+# Import env.py settings
+import env
+
 from django.core.wsgi import get_wsgi_application
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'portal.settings')
 
 application = get_wsgi_application()
+
+
+
+
