@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h2>Job List</h2>
+    <ul class="list-group">
+        {% for job in jobs %}
+            <li class="list-group-item"><a href="{% url 'job_detail' job.pk %}">{{ job.title }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

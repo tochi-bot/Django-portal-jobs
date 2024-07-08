@@ -14,10 +14,16 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-from jobs.views import my_jobs
+from django.urls import path, include
+from jobs import views
 
 urlpatterns = [
-    path('jobs/', my_jobs, name='jobs'),
+    path('', views.job_list, name='job_list'),  # This is the home page route
+    path('job_create/', views.job_create, name='job_create'),
+    path('job_detail/<int:pk>/', views.job_detail, name='job_detail'),
+    path('application_create/<int:pk>/', views.application_create, name='application_create'),
+    path('accounts/', include('django.contrib.auth.urls')),  # Includes auth-related URLs
+    path('signup/', views.signup, name='signup'),
+    path('profile/', views.profile, name='profile'),
     path('admin/', admin.site.urls),
 ]
